@@ -9,4 +9,11 @@ public class Main {
     {
 
     }
+
+    //region print
+    public static void print(Object obj)
+    {
+        System.out.print(obj);
+    }
+    //endregion
 }
