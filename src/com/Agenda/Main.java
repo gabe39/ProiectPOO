@@ -11,6 +11,7 @@ public class Main {
     {
         boolean utilizatorNou = true;
         if(utilizatorNou) PageUtilizatorNou();
+        else MainPage();
     }
 
     //region print
@@ -30,7 +31,8 @@ public class Main {
 
     public static void MainPage()
     {
-
+        print("Bine ai venit, "+numeUtilizator+".");
+        print("Alege una din urmatoarele optiuni: \n(1) Afisare contacte \n(2)");
     }
 
     public static void PageUtilizatorNou()
@@ -38,5 +40,7 @@ public class Main {
         print("Bine ai venit!");
         print("\nEste prima data cand deschizi aceasta aplicatie, introdu numele detinatorului acestei agende electronice:\n");
         numeUtilizator = scn.next();
+        clrscr();
+        MainPage();
     }
 }
