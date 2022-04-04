@@ -6,10 +6,10 @@ public class Main {
     public List<Contact> contacte = new ArrayList<Contact>();
     public static Scanner scn = new Scanner(System.in);
     public static String numeUtilizator;
+    public static boolean utilizatorNou = true;
 
     public static void main(String[] args)
     {
-        boolean utilizatorNou = true;
         if(utilizatorNou) PageUtilizatorNou();
         else MainPage();
     }
@@ -40,7 +40,7 @@ public class Main {
         print("Bine ai venit!");
         print("\nEste prima data cand deschizi aceasta aplicatie, introdu numele detinatorului acestei agende electronice:\n");
         numeUtilizator = scn.next();
-        clrscr();
+        //clrscr();
         MainPage();
     }
 }
