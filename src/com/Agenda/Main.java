@@ -3,13 +3,15 @@ import java.util.*;
 
 public class Main {
 
-    public List<Contact> contacte = new ArrayList<Contact>();
+    public static List<Contact> contacte = new ArrayList<>();
     public static Scanner scn = new Scanner(System.in);
     public static String numeUtilizator;
     public static boolean utilizatorNou = true;
+    public static int optiune;
 
     public static void main(String[] args)
     {
+        Contact persoana = new Contact().CreareContact("Ion","Popescu","Str dragulesti, nr 5",0756789512L,0);
         if(utilizatorNou) PageUtilizatorNou();
         else MainPage();
     }
@@ -32,7 +34,15 @@ public class Main {
     public static void MainPage()
     {
         print("Bine ai venit, "+numeUtilizator+".");
-        print("Alege una din urmatoarele optiuni: \n(1) Afisare contacte \n(2)");
+        print("Alege una din urmatoarele optiuni: \n(1) Afisare contacte \n(2) Creare contact nou");
+        switch (optiune) {
+            case 1:
+                PageAfisareContacte();
+                break;
+            case 2:
+                break;
+            default: print("Optiunea selectata nu exista, incearca din nou.");
+        }
     }
 
     public static void PageUtilizatorNou()
@@ -42,5 +52,13 @@ public class Main {
         numeUtilizator = scn.next();
         //clrscr();
         MainPage();
+    }
+
+    public static void PageAfisareContacte()
+    {
+        for (Contact persoana : contacte)
+        {
+            persoana.AfisareContact();
+        }
     }
 }
