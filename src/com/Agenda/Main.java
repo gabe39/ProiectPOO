@@ -40,7 +40,7 @@ public class Main {
         print("Bine ai venit!");
         print("\nEste prima data cand deschizi aceasta aplicatie, introdu numele detinatorului acestei agende electronice:\n");
         numeUtilizator = scn.next();
-        //clrscr();
+        //.clrscr();
         MainPage();
     }
 }
