@@ -25,6 +25,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -35,14 +42,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/lanterna-3.1.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="agenda.HelloWorld" />
+      <module name="AgendaTextUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agenda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="agenda.Main" />
       <module name="AgendaTextUI" />
@@ -56,6 +78,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -70,6 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1649795252521</updated>
       <workItem from="1649795256414" duration="3617000" />
+      <workItem from="1649828729759" duration="7259000" />
+      <workItem from="1649913884222" duration="3778000" />
     </task>
     <servers />
   </component>
@@ -86,31 +111,40 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1649796737426">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649796737426" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1649800135502">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1649917699605">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1649917699605" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649800135502" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1649800135502">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1649917699605">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1649917699605" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649800135502" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1649800135502">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1649917699605">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1649917699605" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649800135502" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1649800135502">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1649917699605">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1649917699605" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649800135502" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1649796746061">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1649796746061" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1649832880935">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1649832880935" />
   </component>
 </project>
