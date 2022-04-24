@@ -14,7 +14,7 @@ public class Main {
     public static MultiWindowTextGUI gui;
     public static BasicWindow mainWindow;
     public static Panel mainPanel;
-
+    public static boolean updateWindow = false;
     public static BasicWindow adaugaContactWindow;
     public static Panel adaugaContacPanel;
 
@@ -36,12 +36,17 @@ public class Main {
         // Create gui and start gui
         TextColor tc = new TextColor.RGB(125,125,125);
         gui = new MultiWindowTextGUI(screen, new DefaultWindowManager(), new EmptySpace(tc));
-        gui.addWindow(currentWindow);
+        if(updateWindow)
+        {
+            gui.addWindow(currentWindow);
+            updateWindow = false;
+        }
     }
 
     public static void AdaugaContactWindow()
     {
         adaugaContactWindow = new BasicWindow();
+        currentWindow = adaugaContactWindow;
         adaugaContactWindow.setHints(Arrays.asList(Window.Hint.CENTERED,Window.Hint.NO_DECORATIONS, Window.Hint.NO_POST_RENDERING));
         adaugaContacPanel = new Panel();
         adaugaContacPanel.setLayoutManager(new GridLayout(2));
@@ -58,7 +63,8 @@ public class Main {
         //adaugaContacPanel.addComponent(new EmptySpace()); //new TerminalSize(0,0)
         //adaugaContacPanel.addComponent(new EmptySpace()); //new TerminalSize(0,0)
         adaugaContacPanel.addComponent(txtBoxPrenume);
-        currentWindow = adaugaContactWindow;
+
+        updateWindow = true;
 
     }
 
@@ -84,5 +90,6 @@ public class Main {
         mainPanel.addComponent(btn1);
         mainPanel.addComponent(btn2);
         currentWindow = mainWindow;
+        updateWindow = true;
     }
 }
