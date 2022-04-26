@@ -9,4 +9,5 @@ module JavaFxApplication {
     requires javafx.swt;
 
     opens sample;
+    opens sample.FXML_Pages;
 }
