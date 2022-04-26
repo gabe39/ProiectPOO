@@ -42,7 +42,7 @@ public class addContactPageController {
         Contact persoana = new Contact(campNume.getText(),campPrenume.getText(),campAdresa.getText(),campTelefon.getText(),campTelefonAcasa.getText());
         System.out.print("\n"+persoana._nume+" "+persoana._prenume+" "+persoana._adresa+" "+persoana._telefon+" "+persoana._telefonAcasa);
         notificare.setText("Contactul a fost adaugat cu succes!");
-        PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+        PauseTransition pause = new PauseTransition(Duration.seconds(0.25));
         pause.setOnFinished(event ->
         {
             try
@@ -55,6 +55,8 @@ public class addContactPageController {
             }
         });
         pause.play();
+
+        new Main().AdaugaContactInAgenda(persoana);
     }
 
 

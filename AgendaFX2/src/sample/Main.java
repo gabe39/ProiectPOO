@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main extends Application {
 
@@ -35,6 +36,12 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public void AdaugaContactInAgenda(Contact c)
+    {
+        agenda.add(c);
+        agenda.sort(Contact.ComparatorNumePrenume);
     }
 
     public void SwitchScene(String fxml, Scene scene) throws IOException

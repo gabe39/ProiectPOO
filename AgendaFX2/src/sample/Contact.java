@@ -1,4 +1,4 @@
-package sample;
+package sample;import java.util.Comparator;
 
 public class Contact {
 
@@ -21,4 +21,19 @@ public class Contact {
         this._telefon = telefon;
         this._telefonAcasa = telefonAcasa;
     }
+
+    public static Comparator<Contact> ComparatorNumePrenume = new Comparator<Contact>()
+    {
+        public int compare(Contact c1, Contact c2)
+        {
+            String NumePrenumeContact1 = c1._nume.toUpperCase()+" "+c1._prenume.toUpperCase();
+            String NumePrenumeContact2 = c2._nume.toUpperCase()+" "+c2._prenume.toUpperCase();
+
+            //ordine crescatoare
+            return NumePrenumeContact1.compareTo(NumePrenumeContact2);
+
+            //ordine descrescatoare
+            //return NumePrenumeContact2.compareTo(NumePrenumeContact1);
+        }
+    };
 }
