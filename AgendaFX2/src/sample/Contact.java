@@ -1,4 +1,8 @@
-package sample;import java.util.Comparator;
+package sample;
+
+import javafx.beans.property.SimpleStringProperty;
+
+import java.util.Comparator;
 
 public class Contact {
 
@@ -22,18 +26,39 @@ public class Contact {
         this._telefonAcasa = telefonAcasa;
     }
 
-    public static Comparator<Contact> ComparatorNumePrenume = new Comparator<Contact>()
+    public void Afisare()
     {
-        public int compare(Contact c1, Contact c2)
-        {
-            String NumePrenumeContact1 = c1._nume.toUpperCase()+" "+c1._prenume.toUpperCase();
-            String NumePrenumeContact2 = c2._nume.toUpperCase()+" "+c2._prenume.toUpperCase();
+        System.out.print("\n"+_nume+" "+_prenume+" "+_adresa+" "+_telefon+" "+_telefonAcasa);
+    }
 
-            //ordine crescatoare
-            return NumePrenumeContact1.compareTo(NumePrenumeContact2);
+    public static Comparator<Contact> ComparatorNumePrenume = (c1, c2) -> {
+        String NumePrenumeContact1 = c1._nume.toUpperCase()+" "+c1._prenume.toUpperCase();
+        String NumePrenumeContact2 = c2._nume.toUpperCase()+" "+c2._prenume.toUpperCase();
 
-            //ordine descrescatoare
-            //return NumePrenumeContact2.compareTo(NumePrenumeContact1);
-        }
+        //ordine crescatoare
+        return NumePrenumeContact1.compareTo(NumePrenumeContact2);
+
+        //ordine descrescatoare
+        //return NumePrenumeContact2.compareTo(NumePrenumeContact1);
     };
+
+    public SimpleStringProperty get_nume() {
+        return new SimpleStringProperty(_nume);
+    }
+
+    public SimpleStringProperty get_prenume() {
+        return new SimpleStringProperty(_prenume);
+    }
+
+    public SimpleStringProperty get_adresa() {
+        return new SimpleStringProperty(_adresa);
+    }
+
+    public SimpleStringProperty get_telefon() {
+        return new SimpleStringProperty(_telefon);
+    }
+
+    public SimpleStringProperty get_telefonAcasa() {
+        return new SimpleStringProperty(_telefonAcasa);
+    }
 }

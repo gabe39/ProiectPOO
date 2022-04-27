@@ -11,11 +11,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Main extends Application {
 
-    private ArrayList<Contact> agenda = new ArrayList<Contact>();
+    private static ArrayList<Contact> agenda = new ArrayList<Contact>();
 
     @Override
     public void start(Stage stage) throws Exception
@@ -28,19 +27,36 @@ public class Main extends Application {
         stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.setTitle("Agenda");
+        stage.setResizable(false);
         stage.show();
     }
-
-
-
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void AdaugaContactInAgenda(Contact c)
+    public static void AdaugaContactInAgenda(Contact c)
     {
-        agenda.add(c);
+        getAgenda().add(c);
+        getAgenda().sort(Contact.ComparatorNumePrenume);
+    }
+
+    public static void AfiseazaAgenda()
+    {
+        for (Contact c : agenda)
+        {
+            c.Afisare();
+        }
+    }
+
+    public static ArrayList<Contact> getAgenda()
+    {
+        return agenda;
+    }
+
+    public static void StergeContact (Contact c)
+    {
+        agenda.remove(c);
         agenda.sort(Contact.ComparatorNumePrenume);
     }
 

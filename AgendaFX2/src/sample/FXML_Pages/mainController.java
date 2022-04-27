@@ -21,4 +21,9 @@ public class mainController
         new Main().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
     }
 
+    public void GoToListaContacte(ActionEvent e) throws Exception
+    {
+        new Main().SwitchScene("FXML_Pages/ListContactsPage",rootPane.getScene());
+    }
+
 }
