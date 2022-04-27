@@ -26,4 +26,9 @@ public class mainController
         new Main().SwitchScene("FXML_Pages/ListContactsPage",rootPane.getScene());
     }
 
+    public void GoToCalculator() throws Exception
+    {
+        new Main().SwitchScene("FXML_Pages/CalculatorPage",rootPane.getScene());
+    }
+
 }

@@ -47,7 +47,7 @@ public class ListContactsPage implements Initializable {
 
         for(Contact c: liniiSelectate) Main.StergeContact(c);
         toateContactele.removeAll(liniiSelectate);
-
+        Main.AfiseazaAgenda();
     }
 
     public void GoBackToMain(ActionEvent e) throws Exception
