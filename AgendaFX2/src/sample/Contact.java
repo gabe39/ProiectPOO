@@ -6,15 +6,15 @@ import java.util.Comparator;
 
 public class Contact {
 
-    public String _nume,_prenume,_adresa,_telefon,_telefonAcasa;
+    private String _nume,_prenume,_adresa,_telefon,_telefonAcasa;
 
     public Contact()
     {
-        this._nume = "";
-        this._prenume = "";
-        this._adresa = "";
-        this._telefon = "";
-        this._telefonAcasa = "";
+        this._nume ="";
+        this._prenume ="";
+        this._adresa ="";
+        this._telefon ="";
+        this._telefonAcasa ="";
     }
 
     public Contact(String nume, String prenume, String adresa,String telefon, String telefonAcasa)
@@ -42,23 +42,23 @@ public class Contact {
         //return NumePrenumeContact2.compareTo(NumePrenumeContact1);
     };
 
-    public SimpleStringProperty get_nume() {
-        return new SimpleStringProperty(_nume);
+    public String get_nume() {
+        return _nume;
     }
 
-    public SimpleStringProperty get_prenume() {
-        return new SimpleStringProperty(_prenume);
+    public String get_prenume() {
+        return _prenume;
     }
 
-    public SimpleStringProperty get_adresa() {
-        return new SimpleStringProperty(_adresa);
+    public String get_adresa() {
+        return _adresa;
     }
 
-    public SimpleStringProperty get_telefon() {
-        return new SimpleStringProperty(_telefon);
+    public String get_telefon() {
+        return _telefon;
     }
 
-    public SimpleStringProperty get_telefonAcasa() {
-        return new SimpleStringProperty(_telefonAcasa);
+    public String get_telefonAcasa() {
+        return _telefonAcasa;
     }
 }

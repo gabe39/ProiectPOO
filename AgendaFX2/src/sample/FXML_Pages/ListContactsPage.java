@@ -1,7 +1,9 @@
 package sample.FXML_Pages;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -13,7 +15,7 @@ import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ListContactsPage  {
+public class ListContactsPage implements Initializable {
 
     @FXML AnchorPane rootPane;
 
@@ -24,17 +26,28 @@ public class ListContactsPage  {
     @FXML TableColumn<Contact,String> tcTelefon;
     @FXML TableColumn<Contact,String> tcTelefonAcasa;
 
-    @FXML private void initialize(URL url, ResourceBundle resourceBundle)
+     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        tcNume.setCellValueFactory(new PropertyValueFactory<>("get_nume"));
-        tcNume.setCellValueFactory(new PropertyValueFactory<>("get_prenume"));
-        tcNume.setCellValueFactory(new PropertyValueFactory<>("get_adresa"));
-        tcNume.setCellValueFactory(new PropertyValueFactory<>("get_telefon"));
-        tcNume.setCellValueFactory(new PropertyValueFactory<>("get_telefonAcasa"));
+        tcNume.setCellValueFactory(new PropertyValueFactory<Contact,String>("_nume"));
+        tcPrenume.setCellValueFactory(new PropertyValueFactory<Contact,String>("_prenume"));
+        tcAdresa.setCellValueFactory(new PropertyValueFactory<Contact,String>("_adresa"));
+        tcTelefon.setCellValueFactory(new PropertyValueFactory<Contact,String>("_telefon"));
+        tcTelefonAcasa.setCellValueFactory(new PropertyValueFactory<Contact,String>("_telefonAcasa"));
 
         tabelContacte.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        tabelContacte.getItems().setAll(Main.getAgenda());
-        Main.AfiseazaAgenda();
+        tabelContacte.getItems().setAll(Main.agenda);
+    }
+
+    public void StergeContact()
+    {
+        ObservableList<Contact> liniiSelectate, toateContactele;
+        toateContactele = tabelContacte.getItems();
+
+        liniiSelectate = tabelContacte.getSelectionModel().getSelectedItems();
+
+        for(Contact c: liniiSelectate) Main.StergeContact(c);
+        toateContactele.removeAll(liniiSelectate);
+
     }
 
     public void GoBackToMain(ActionEvent e) throws Exception

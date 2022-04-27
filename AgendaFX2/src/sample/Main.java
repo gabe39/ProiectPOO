@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    private static ArrayList<Contact> agenda = new ArrayList<Contact>();
+    public static ArrayList<Contact> agenda = new ArrayList<Contact>();
 
     @Override
     public void start(Stage stage) throws Exception
@@ -26,7 +26,7 @@ public class Main extends Application {
         Image icon = new Image("agendaIcon2.png");
         stage.getIcons().add(icon);
         stage.setScene(scene);
-        stage.setTitle("Agenda");
+        stage.setTitle("Agenda Electronica");
         stage.setResizable(false);
         stage.show();
     }
@@ -37,8 +37,8 @@ public class Main extends Application {
 
     public static void AdaugaContactInAgenda(Contact c)
     {
-        getAgenda().add(c);
-        getAgenda().sort(Contact.ComparatorNumePrenume);
+        agenda.add(c);
+        agenda.sort(Contact.ComparatorNumePrenume);
     }
 
     public static void AfiseazaAgenda()
@@ -49,10 +49,6 @@ public class Main extends Application {
         }
     }
 
-    public static ArrayList<Contact> getAgenda()
-    {
-        return agenda;
-    }
 
     public static void StergeContact (Contact c)
     {

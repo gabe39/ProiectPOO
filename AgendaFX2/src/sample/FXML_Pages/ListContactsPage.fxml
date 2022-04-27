@@ -10,16 +10,16 @@
    <children>
       <Button layoutX="14.0" layoutY="373.0" mnemonicParsing="false" onAction="#GoBackToMain" text="Inapoi" />
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="373.0" mnemonicParsing="false" onAction="#GoToAddContact" text="Adauga Contact" />
-      <Button layoutX="479.0" layoutY="373.0" mnemonicParsing="false" text="Sterge Contact" />
-      <ScrollPane hbarPolicy="NEVER" layoutX="1.0" prefHeight="361.0" prefWidth="587.0">
+      <Button layoutX="479.0" layoutY="373.0" mnemonicParsing="false" onAction="#StergeContact" text="Sterge Contact" />
+      <ScrollPane hbarPolicy="NEVER" layoutX="1.0" prefHeight="361.0" prefWidth="588.0">
          <content>
-            <TableView fx:id="tabelContacte" prefHeight="359.0" prefWidth="585.0">
+            <TableView fx:id="tabelContacte" prefHeight="365.0" prefWidth="588.0">
                <columns>
-                  <TableColumn fx:id="tcNume" prefWidth="119.0" text="Nume" />
-                  <TableColumn fx:id="tcPrenume" prefWidth="117.0" text="Prenume" />
-                  <TableColumn fx:id="tcAdresa" prefWidth="127.0" text="Adresa" />
-                  <TableColumn fx:id="tcTelefon" minWidth="0.0" prefWidth="111.0" text="Telefon" />
-                  <TableColumn fx:id="tcTelefonAcasa" minWidth="0.0" prefWidth="110.0" text="Telefon Acasa" />
+                  <TableColumn fx:id="tcNume" prefWidth="113.0" text="Nume" />
+                  <TableColumn fx:id="tcPrenume" prefWidth="123.0" text="Prenume" />
+                  <TableColumn fx:id="tcAdresa" prefWidth="115.0" text="Adresa" />
+                  <TableColumn fx:id="tcTelefon" minWidth="0.0" prefWidth="113.0" text="Telefon" />
+                  <TableColumn fx:id="tcTelefonAcasa" minWidth="0.0" prefWidth="109.0" text="Telefon Acasa" />
                </columns>
             </TableView>
          </content>
