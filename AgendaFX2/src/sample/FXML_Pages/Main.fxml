@@ -11,6 +11,7 @@
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToAddContact" text="Adauga Contact" textAlignment="CENTER" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToListaContacte" text="Lista Contacte" textAlignment="CENTER" />
             <Button layoutX="10.0" layoutY="45.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToCalculator" text="Calculator" textAlignment="CENTER" />
+            <Button layoutX="10.0" layoutY="80.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToNotes" text="Carnet" textAlignment="CENTER" />
          </children>
       </VBox>
    </children>

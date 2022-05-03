@@ -16,12 +16,12 @@ public class mainController
     @FXML
     AnchorPane rootPane;
 
-    public void GoToAddContact(ActionEvent e) throws Exception
+    public void GoToAddContact() throws Exception
     {
         new Main().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
     }
 
-    public void GoToListaContacte(ActionEvent e) throws Exception
+    public void GoToListaContacte() throws Exception
     {
         new Main().SwitchScene("FXML_Pages/ListContactsPage",rootPane.getScene());
     }
@@ -31,4 +31,8 @@ public class mainController
         new Main().SwitchScene("FXML_Pages/CalculatorPage",rootPane.getScene());
     }
 
+    public void GoToNotes() throws Exception
+    {
+        new Main().SwitchScene("FXML_Pages/NotesPage",rootPane.getScene());
+    }
 }

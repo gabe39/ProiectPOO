@@ -5,7 +5,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
+import javafx.scene.layout.AnchorPane;
 import javafx.util.converter.NumberStringConverter;
+import sample.Main;
 
 import java.net.URL;
 import java.text.NumberFormat;
@@ -15,6 +17,7 @@ public class CalculatorPage implements Initializable {
     @FXML TextField nr1;
     @FXML TextField nr2;
     @FXML TextField rezultat;
+    @FXML AnchorPane rootPane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -79,6 +82,11 @@ public class CalculatorPage implements Initializable {
         nr1.setText("");
         nr2.setText("");
         rezultat.setText("");
+    }
+
+    public void GoToBack() throws Exception
+    {
+        new Main().SwitchScene("FXML_Pages/Main", rootPane.getScene());
     }
 
 }
