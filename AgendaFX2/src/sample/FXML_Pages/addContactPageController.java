@@ -26,16 +26,15 @@ public class addContactPageController {
     @FXML Label notificare;
 
 
-    public void GoBackToMain(ActionEvent e) throws Exception
+    public void GoBackToMain() throws Exception
     {
         new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
     }
 
 
-    public void AdaugaContact(ActionEvent e)
+    public void AdaugaContact()
     {
         Contact persoana = new Contact(campNume.getText(),campPrenume.getText(),campAdresa.getText(),campTelefon.getText(),campTelefonAcasa.getText());
-        //System.out.print("\n"+persoana._nume+" "+persoana._prenume+" "+persoana._adresa+" "+persoana._telefon+" "+persoana._telefonAcasa);
         notificare.setText("Contactul a fost adaugat cu succes!");
         PauseTransition pause = new PauseTransition(Duration.seconds(0.25));
         pause.setOnFinished(event ->
