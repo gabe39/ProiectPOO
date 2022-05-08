@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="413.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.AlarmsPage">
+   <children>
+      <TableView prefHeight="374.0" prefWidth="588.0">
+        <columns>
+          <TableColumn prefWidth="296.0" text="Nume Alarma" />
+          <TableColumn prefWidth="291.0" text="Ora" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" text="Inapoi" />
+      <Button layoutX="246.0" layoutY="380.0" mnemonicParsing="false" text="Adauga alarma" />
+      <Button layoutX="484.0" layoutY="380.0" mnemonicParsing="false" text="Sterge alarma" />
+   </children>
+</AnchorPane>

@@ -50,12 +50,12 @@ public class ListContactsPage implements Initializable {
         Main.AfiseazaAgenda();
     }
 
-    public void GoBackToMain(ActionEvent e) throws Exception
+    public void GoBackToMain() throws Exception
     {
         new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
     }
 
-    public void GoToAddContact(ActionEvent e) throws Exception
+    public void GoToAddContact() throws Exception
     {
         new Main().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
     }
