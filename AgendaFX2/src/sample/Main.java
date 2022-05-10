@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static ArrayList<Contact> agenda = new ArrayList<Contact>();
+    public static ArrayList<Notita> carnetNotite = new ArrayList<Notita>();
 
     @Override
     public void start(Stage stage) throws Exception

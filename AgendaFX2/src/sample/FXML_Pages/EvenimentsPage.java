@@ -1,5 +1,6 @@
 package sample.FXML_Pages;
 
-public class EvenimentsPage {
+public class EvenimentsPage
+{
 
 }

@@ -22,21 +22,6 @@ public class CalculatorPage implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        /*
-        nr1.setTextFormatter(new TextFormatter<>(c ->
-        {
-            if (!c.getControlNewText().matches("\\d*")) return null;
-            else return c;
-        }
-        ));
-
-        nr2.setTextFormatter(new TextFormatter<>(c ->
-        {
-            if (!c.getControlNewText().matches("\\d*")) return null;
-            else return c;
-        }
-        ));
-        */
 
         nr1.setTextFormatter(new TextFormatter<>(new NumberStringConverter(".0")));
         nr2.setTextFormatter(new TextFormatter<>(new NumberStringConverter(".0")));
