@@ -1,0 +1,106 @@
+@startuml
+class sample.Notita {
+- String TitluNotita
++ {static} Comparator<Notita> ComparatorTitlu
++ <<Create>> Notita(String,String,String)
++ void Afisare()
++ String getTitluNotita()
++ String getTextNotita()
++ String getDataCrearii()
+}
+class sample.Main {
++ {static} ArrayList<Contact> agenda
++ {static} ArrayList<Notita> carnetNotite
++ void start(Stage)
++ {static} void main(String[])
++ {static} void AdaugaContactInAgenda(Contact)
++ {static} void AfiseazaAgenda()
++ {static} void StergeContact(Contact)
++ {static} void AdaugaNotitaInCarnet(Notita)
++ {static} void StergeNotita(Notita)
++ {static} void AfiseazaNotite()
++ void SwitchScene(String,Scene)
+}
+class sample.FXML_Pages.CalculatorPage {
+~ TextField nr1
+~ TextField nr2
+~ TextField rezultat
+~ AnchorPane rootPane
++ void initialize(URL,ResourceBundle)
++ void Aduna()
++ void Scade()
++ void Inmulteste()
++ void Imparte()
++ void ReseteazaCampurile()
++ void GoToBack()
+}
+class sample.FXML_Pages.EvenimentsPage {
+}
+class sample.FXML_Pages.NotesPage {
+~ AnchorPane rootPane
+~ TableView<Notita> tabelNotite
+~ TableColumn<Notita,String> tcTitluNotita
+~ TableColumn<Notita,String> tcDataCrearii
++ void initialize(URL,ResourceBundle)
++ void StergeNotita()
++ void GoBack()
+}
+class sample.Eveniment {
+- String DataEveniment
++ <<Create>> Eveniment(String,String,String)
++ String getDataEveniment()
++ String getNumeEveniment()
++ String getOraEvenniment()
+}
+class sample.FXML_Pages.AlarmsPage {
+}
+class sample.FXML_Pages.ListContactsPage {
+~ AnchorPane rootPane
+~ TableView<Contact> tabelContacte
+~ TableColumn<Contact,String> tcNume
+~ TableColumn<Contact,String> tcPrenume
+~ TableColumn<Contact,String> tcAdresa
+~ TableColumn<Contact,String> tcTelefon
+~ TableColumn<Contact,String> tcTelefonAcasa
++ void initialize(URL,ResourceBundle)
++ void StergeContact()
++ void GoBackToMain()
++ void GoToAddContact()
+}
+class sample.FXML_Pages.addContactPageController {
+~ AnchorPane rootPane
+~ TextField campNume
+~ TextField campPrenume
+~ TextField campAdresa
+~ TextField campTelefon
+~ TextField campTelefonAcasa
+~ Label notificare
++ void GoBackToMain()
++ void AdaugaContact()
+}
+class sample.FXML_Pages.mainController {
+~ AnchorPane rootPane
++ void GoToAddContact()
++ void GoToListaContacte()
++ void GoToCalculator()
++ void GoToNotes()
+}
+class sample.Contact {
+- String _nume
++ {static} Comparator<Contact> ComparatorNumePrenume
++ <<Create>> Contact()
++ <<Create>> Contact(String,String,String,String,String)
++ void Afisare()
++ String get_nume()
++ String get_prenume()
++ String get_adresa()
++ String get_telefon()
++ String get_telefonAcasa()
+}
+
+
+javafx.application.Application <|-- sample.Main
+javafx.fxml.Initializable <|.. sample.FXML_Pages.CalculatorPage
+javafx.fxml.Initializable <|.. sample.FXML_Pages.NotesPage
+javafx.fxml.Initializable <|.. sample.FXML_Pages.ListContactsPage
+@enduml

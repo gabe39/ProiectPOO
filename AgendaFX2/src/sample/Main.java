@@ -57,6 +57,25 @@ public class Main extends Application {
         agenda.sort(Contact.ComparatorNumePrenume);
     }
 
+    public static void AdaugaNotitaInCarnet(Notita n)
+    {
+        carnetNotite.add(n);
+        carnetNotite.sort(Notita.ComparatorTitlu);
+    }
+    public static void StergeNotita (Notita n)
+    {
+        carnetNotite.remove(n);
+        carnetNotite.sort(Notita.ComparatorTitlu);
+    }
+
+    public static void AfiseazaNotite()
+    {
+        for (Notita n : carnetNotite)
+        {
+            n.Afisare();
+        }
+    }
+
     public void SwitchScene(String fxml, Scene scene) throws IOException
     {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml+".fxml"));

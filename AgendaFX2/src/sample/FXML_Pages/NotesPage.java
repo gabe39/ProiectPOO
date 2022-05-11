@@ -1,5 +1,6 @@
 package sample.FXML_Pages;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.SelectionMode;
@@ -17,7 +18,7 @@ import java.util.ResourceBundle;
 public class NotesPage implements Initializable {
 
     @FXML AnchorPane rootPane;
-    @FXML TableView tabelNotite;
+    @FXML TableView<Notita> tabelNotite;
     @FXML TableColumn<Notita,String> tcTitluNotita;
     @FXML TableColumn<Notita, String> tcDataCrearii;
 
@@ -28,6 +29,18 @@ public class NotesPage implements Initializable {
 
         tabelNotite.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         tabelNotite.getItems().setAll(Main.carnetNotite);
+    }
+
+    public void StergeNotita()
+    {
+        ObservableList<Notita> liniiSelectate, toateNotitele;
+        toateNotitele = tabelNotite.getItems();
+
+        liniiSelectate = tabelNotite.getSelectionModel().getSelectedItems();
+
+        for(Notita n: liniiSelectate) Main.StergeNotita(n);
+        toateNotitele.removeAll(liniiSelectate);
+        Main.AfiseazaNotite();
     }
 
     public void GoBack() throws Exception
