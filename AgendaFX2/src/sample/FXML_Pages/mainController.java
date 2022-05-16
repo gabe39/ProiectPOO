@@ -1,13 +1,10 @@
 package sample.FXML_Pages;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import sample.FXMLSceneChanger;
 import sample.Main;
 
 import java.io.IOException;
@@ -15,29 +12,35 @@ import java.io.IOException;
 public class mainController
 {
 
+    //@FXML = se injecteaza numele variabilelor din documentul FXML
     @FXML AnchorPane rootPane;
     @FXML ImageView gifView;
 
+    //Metode care schimba documentele FXML/paginile interfetei
+    //↓
     public void GoToAddContact() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
     }
 
     public void GoToListaContacte() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/ListContactsPage",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/ListContactsPage",rootPane.getScene());
     }
 
     public void GoToCalculator() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/CalculatorPage",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/CalculatorPage",rootPane.getScene());
     }
 
     public void GoToNotes() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/NotesPage",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/NotesPage",rootPane.getScene());
     }
+    //↑
 
+    //Metode care schimba/afiseaza o imagine in functie de pozitia cursorului pe butoane
+    //↓
     public void EmptyGif()
     {
         gifView.setImage(null);
@@ -63,4 +66,5 @@ public class mainController
         Image imGif = new Image("Carnet.gif");
         gifView.setImage(imGif);
     }
+    //↑
 }

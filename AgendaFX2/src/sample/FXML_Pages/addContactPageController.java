@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import sample.Contact;
+import sample.FXMLSceneChanger;
 import sample.Main;
 
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class addContactPageController {
 
     public void GoBackToMain() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/Main",rootPane.getScene());
     }
 
 
@@ -41,7 +42,7 @@ public class addContactPageController {
         {
             try
             {
-                new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
+                new FXMLSceneChanger().SwitchScene("FXML_Pages/Main",rootPane.getScene());
             }
             catch (IOException ex)
             {

@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="413.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.AlarmsPage">
+<AnchorPane prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.AlarmsPage">
    <children>
-      <TableView prefHeight="374.0" prefWidth="594.0">
+      <TableView prefHeight="374.0" prefWidth="600.0">
         <columns>
           <TableColumn prefWidth="217.0" text="Nume Alarma" />
             <TableColumn minWidth="0.0" prefWidth="208.0" text="Repetare zile" />
-            <TableColumn minWidth="0.0" prefWidth="168.0" text="Ora" />
+            <TableColumn minWidth="0.0" prefWidth="174.0" text="Ora" />
         </columns>
       </TableView>
       <Button layoutX="14.0" layoutY="380.0" mnemonicParsing="false" text="Inapoi" />

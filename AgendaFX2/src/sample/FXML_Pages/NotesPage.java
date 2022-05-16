@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.Contact;
+import sample.FXMLSceneChanger;
 import sample.Main;
 import sample.Notita;
 
@@ -28,7 +29,6 @@ public class NotesPage implements Initializable {
     @FXML Button btAfisare;
     @FXML Button btEditare;
     @FXML Button btAdaugare;
-    //@FXML AdaugaNotitaPage adaugaNotitaPage;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tcTitluNotita.setCellValueFactory(new PropertyValueFactory<Notita,String>("TitluNotita"));
@@ -79,33 +79,42 @@ public class NotesPage implements Initializable {
         Main.AfiseazaNotite();
     }
 
-    public void AdaugaNotitaPage() throws Exception
-    {
-        new Main().SwitchScene("FXML_Pages/AdaugaNotitaPage",rootPane.getScene());
-    }
+
 
     public void AfiseazaNotita() throws Exception
     {
         ObservableList<Notita> liniiSelectate;
         liniiSelectate = tabelNotite.getSelectionModel().getSelectedItems();
 
+        FXMLSceneChanger fsc = new FXMLSceneChanger();
+        fsc.SwitchScene("FXML_Pages/AdaugaNotitaPage",rootPane.getScene());
 
-        //adaugaNotitaPage.taContinutNotita.setEditable(false);
-        //adaugaNotitaPage.tfTitluNotita.setEditable(false);
+        AdaugaNotitaPage adaugaNotitaPage = fsc.loader.getController();
+
+        adaugaNotitaPage.btSalveazaNotita.setVisible(false);
+        adaugaNotitaPage.btAnuleaza.setText("Inapoi");
+
+        adaugaNotitaPage.taContinutNotita.setEditable(false);
+        adaugaNotitaPage.tfTitluNotita.setEditable(false);
 
         for(Notita n: liniiSelectate)
         {
-            //adaugaNotitaPage.taContinutNotita.setText(n.getTitluNotita());
-            //adaugaNotitaPage.tfTitluNotita.setText(n.getTextNotita());
-            AdaugaNotitaPage.SetTfTitluNotitaText(n.getTitluNotita());
-            //System.out.print("\n"+n.getTitluNotita()); System.out.print("\n"+n.getTextNotita());
+            adaugaNotitaPage.taContinutNotita.setText(n.getTextNotita());
+            adaugaNotitaPage.tfTitluNotita.setText(n.getTitluNotita());
+            System.out.print("\n"+n.getTitluNotita()); System.out.print("\n"+n.getTextNotita());
         }
 
-        new Main().SwitchScene("FXML_Pages/AdaugaNotitaPage",rootPane.getScene());
+
+    }
+
+
+    public void AdaugaNotitaPage() throws Exception
+    {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/AdaugaNotitaPage",rootPane.getScene());
     }
 
     public void GoBack() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/Main",rootPane.getScene());
     }
 }

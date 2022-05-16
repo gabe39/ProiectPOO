@@ -9,6 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import sample.Contact;
+import sample.FXMLSceneChanger;
 import sample.Main;
 
 import java.net.URL;
@@ -51,11 +52,11 @@ public class ListContactsPage implements Initializable {
 
     public void GoBackToMain() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/Main",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/Main",rootPane.getScene());
     }
 
     public void GoToAddContact() throws Exception
     {
-        new Main().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/addContactPageController",rootPane.getScene());
     }
 }

@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="rootPane" prefHeight="413.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.CalculatorPage">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.CalculatorPage">
    <children>
-      <TextField fx:id="nr1" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="258.0" promptText="Nr 1" />
-      <TextField fx:id="nr2" alignment="CENTER" layoutX="316.0" layoutY="14.0" prefHeight="25.0" prefWidth="258.0" promptText="Nr 2" />
-      <TextField fx:id="rezultat" alignment="CENTER" editable="false" layoutX="153.0" layoutY="77.0" prefHeight="25.0" prefWidth="283.0" promptText="Rezultat" />
-      <VBox alignment="CENTER" layoutX="231.0" layoutY="207.0" spacing="10.0">
+      <TextField fx:id="nr1" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="283.0" promptText="Nr 1" />
+      <TextField fx:id="nr2" alignment="CENTER" layoutX="303.0" layoutY="14.0" prefHeight="25.0" prefWidth="283.0" promptText="Nr 2" />
+      <TextField fx:id="rezultat" alignment="CENTER" editable="false" layoutX="159.0" layoutY="77.0" prefHeight="25.0" prefWidth="283.0" promptText="Rezultat" />
+      <VBox alignment="CENTER" layoutX="237.0" layoutY="142.0" spacing="10.0">
          <children>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Aduna" text="Aduna" />
             <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#Scade" text="Scade" />
@@ -19,6 +19,6 @@
             <Button layoutX="10.0" layoutY="115.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ReseteazaCampurile" text="Reseteaza Campurile" />
          </children>
       </VBox>
-      <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoToBack" text="Inapoi" />
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#GoToBack" text="Inapoi" />
    </children>
 </AnchorPane>
