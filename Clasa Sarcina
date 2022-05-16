@@ -1,0 +1,19 @@
+public class Sarcina{
+    private String numeSarcina,termenLimita;
+    private boolean terminatSarcina;
+
+    public Sarcina(String NS,String TL,boolean TS)
+    {this.numeSarcina=NS;
+    this.termenLimita=TL;
+    this.terminatSarcina=TS;
+    }
+    
+public String getNumeSarcina()
+{return this.numeSarcina;}
+public String getTermenLimita()
+{return this.termenLimita;}
+public boolean getTerminatSarcina()
+{return this.terminatSarcina;}
+
+public void setTerminatSarcina(boolean TS)
+{terminatSarcina=TS;}

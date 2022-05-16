@@ -82,4 +82,12 @@ public class Main extends Application {
         Parent root = loader.load();
         scene.setRoot(root);
     }
+
+    public void SwitchScene(String fxml, Scene scene, Object controller) throws IOException
+    {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml+".fxml"));
+        Parent root = loader.load();
+        controller = loader.getController();
+        scene.setRoot(root);
+    }
 }

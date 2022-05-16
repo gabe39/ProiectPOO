@@ -7,20 +7,21 @@
 <?import javafx.scene.layout.HBox?>
 
 <AnchorPane fx:id="rootPane" prefHeight="413.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.NotesPage">
-   <children>
+    <children>
       <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoBack" text="Inapoi" />
-      <TableView fx:id="tabelNotite" prefHeight="364.0" prefWidth="588.0">
+      <TableView fx:id="tabelNotite" onMouseClicked="#UpdateTable" prefHeight="364.0" prefWidth="588.0">
         <columns>
           <TableColumn fx:id="tcTitluNotita" editable="false" prefWidth="414.0" text="Titlu" />
           <TableColumn fx:id="tcDataCrearii" editable="false" prefWidth="168.0" text="Creat la" />
         </columns>
       </TableView>
-      <HBox layoutX="196.0" layoutY="374.0" spacing="5.0">
+      <HBox alignment="CENTER" layoutX="145.0" layoutY="374.0" spacing="5.0" AnchorPane.bottomAnchor="14.0">
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoBack" text="Adauga Notita" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoBack" text="Editeaza Notita" />
+            <Button fx:id="btAdaugare" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AdaugaNotitaPage" text="Adauga Notita" />
+            <Button fx:id="btAfisare" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AfiseazaNotita" text="Afiseaza Notita" />
+            <Button fx:id="btEditare" layoutX="109.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoBack" text="Editeaza Notita" />
          </children>
       </HBox>
-      <Button layoutX="487.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoBack" text="Sterge Notita" />
+      <Button layoutX="487.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StergeNotita" text="Sterge Notita" />
    </children>
 </AnchorPane>
