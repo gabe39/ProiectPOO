@@ -37,6 +37,16 @@ public class mainController
     {
         new FXMLSceneChanger().SwitchScene("FXML_Pages/NotesPage",rootPane.getScene());
     }
+
+    public void GoToAlarms() throws Exception
+    {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/AlarmsPage",rootPane.getScene());
+    }
+
+    public void GoToEvenimente() throws Exception
+    {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/EvenimentsPage",rootPane.getScene());
+    }
     //↑
 
     //Metode care schimba/afiseaza o imagine in functie de pozitia cursorului pe butoane
@@ -64,6 +74,18 @@ public class mainController
     public void CarnetGif()
     {
         Image imGif = new Image("Carnet.gif");
+        gifView.setImage(imGif);
+    }
+
+    public void AlarmGif()
+    {
+        Image imGif = new Image("Alarma.gif");
+        gifView.setImage(imGif);
+    }
+
+    public void EvenimenteGif()
+    {
+        Image imGif = new Image("Evenimente.gif");
         gifView.setImage(imGif);
     }
     //↑

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.ListContactsPage">
+<AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.ListContactsPage">
    <children>
       <Button layoutX="14.0" layoutY="373.0" mnemonicParsing="false" onAction="#GoBackToMain" text="Inapoi" />
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoToAddContact" text="Adauga Contact" />

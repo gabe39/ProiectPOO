@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.NotesPage">
+<AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.NotesPage">
     <children>
       <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoBack" text="Inapoi" />
       <TableView fx:id="tabelNotite" onMouseClicked="#UpdateTable" prefHeight="364.0" prefWidth="600.0">
@@ -15,7 +15,7 @@
           <TableColumn fx:id="tcDataCrearii" editable="false" prefWidth="180.0" text="Creat la" />
         </columns>
       </TableView>
-      <HBox alignment="CENTER" layoutX="152.0" layoutY="374.0" spacing="5.0" AnchorPane.bottomAnchor="1.0">
+      <HBox alignment="CENTER" layoutX="152.0" layoutY="374.0" spacing="5.0" AnchorPane.bottomAnchor="4.0">
          <children>
             <Button fx:id="btAdaugare" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AdaugaNotitaPage" text="Adauga Notita" />
             <Button fx:id="btAfisare" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AfiseazaNotita" text="Afiseaza Notita" />
