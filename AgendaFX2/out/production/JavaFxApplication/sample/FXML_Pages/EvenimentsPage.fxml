@@ -5,17 +5,17 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.EvenimentsPage">
+<AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.EvenimentsPage">
    <children>
-      <TableView prefHeight="368.0" prefWidth="600.0">
+      <TableView fx:id="tabelEvenimente" prefHeight="368.0" prefWidth="600.0">
         <columns>
-          <TableColumn editable="false" prefWidth="331.0" text="Nume Eveniment" />
-          <TableColumn prefWidth="144.0" text="Data" />
-            <TableColumn editable="false" prefWidth="124.0" text="Ora" />
+          <TableColumn fx:id="tcNumeEveniment" editable="false" prefWidth="331.0" text="Nume Eveniment" />
+          <TableColumn fx:id="tcData" prefWidth="144.0" text="Data" />
+            <TableColumn fx:id="tcOra" editable="false" prefWidth="124.0" text="Ora" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="50.0" text="Inapoi" />
-      <Button layoutX="242.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Adauga eveniment" />
-      <Button layoutX="477.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sterge eveniment" />
+      <Button layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoBackToMain" prefHeight="0.0" prefWidth="50.0" text="Inapoi" />
+      <Button layoutX="242.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToAddEveniment" text="Adauga eveniment" />
+      <Button layoutX="477.0" layoutY="374.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StergeEveniment" text="Sterge eveniment" />
    </children>
 </AnchorPane>

@@ -8,14 +8,14 @@ import javafx.scene.image.Image;
 
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 import java.util.ArrayList;
 
 public class Main extends Application {
 
     public static ArrayList<Contact> agenda = new ArrayList<Contact>();
     public static ArrayList<Notita> carnetNotite = new ArrayList<Notita>();
+    public static ArrayList<Eveniment> evenimente = new ArrayList<Eveniment>();
+    //public static ArrayList<Eveniment> alarme = new ArrayList<Alarma>();
 
     @Override
     public void start(Stage stage) throws Exception
@@ -75,4 +75,16 @@ public class Main extends Application {
             n.Afisare();
         }
     }
+
+    public static void AdaugaEveniment(Eveniment e)
+    {
+        evenimente.add(e);
+        evenimente.sort(Eveniment.ComparatorOra);
+    }
+    public static void StergeEveniment (Eveniment e)
+    {
+        evenimente.remove(e);
+        evenimente.sort(Eveniment.ComparatorOra);
+    }
+
 }

@@ -5,9 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import sample.FXMLSceneChanger;
-import sample.Main;
-
-import java.io.IOException;
 
 public class mainController
 {
