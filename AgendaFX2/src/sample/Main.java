@@ -15,7 +15,7 @@ public class Main extends Application {
     public static ArrayList<Contact> agenda = new ArrayList<Contact>();
     public static ArrayList<Notita> carnetNotite = new ArrayList<Notita>();
     public static ArrayList<Eveniment> evenimente = new ArrayList<Eveniment>();
-    //public static ArrayList<Eveniment> alarme = new ArrayList<Alarma>();
+    public static ArrayList<Alarma> alarme = new ArrayList<Alarma>();
 
     @Override
     public void start(Stage stage) throws Exception
@@ -85,6 +85,17 @@ public class Main extends Application {
     {
         evenimente.remove(e);
         evenimente.sort(Eveniment.ComparatorOra);
+    }
+
+    public static void AdaugaAlarma(Alarma a)
+    {
+        alarme.add(a);
+        alarme.sort(Alarma.ComparatorOraAlarma);
+    }
+    public static void StergeAlrama (Alarma a)
+    {
+        alarme.remove(a);
+        alarme.sort(Alarma.ComparatorOraAlarma);
     }
 
 }
