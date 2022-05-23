@@ -5,6 +5,7 @@ import java.util.Comparator;
 public class Alarma {
 
     private String ora, zile, numeAlarma;
+    public Boolean luni,marti,miercuri,joi,vineri;
 
     public Alarma(String NA, String O, String Z) {
         this.ora = O;

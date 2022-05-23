@@ -7,15 +7,15 @@
 
 <AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.AlarmsPage">
    <children>
-      <TableView prefHeight="374.0" prefWidth="600.0">
+      <TableView fx:id="tabelAlarme" prefHeight="374.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="217.0" text="Nume Alarma" />
-            <TableColumn minWidth="0.0" prefWidth="208.0" text="Repetare zile" />
-            <TableColumn minWidth="0.0" prefWidth="174.0" text="Ora" />
+          <TableColumn fx:id="tcNumeAlarma" prefWidth="217.0" text="Nume Alarma" />
+            <TableColumn fx:id="tcRepetareZile" minWidth="0.0" prefWidth="208.0" text="Repetare Zile" />
+            <TableColumn fx:id="tcOra" minWidth="0.0" prefWidth="174.0" text="Ora" />
         </columns>
       </TableView>
       <Button layoutX="14.0" layoutY="377.0" mnemonicParsing="false" onAction="#GoBackToMain" text="Inapoi" />
-      <Button layoutX="252.0" layoutY="377.0" mnemonicParsing="false" text="Adauga alarma" />
-      <Button layoutX="496.0" layoutY="377.0" mnemonicParsing="false" text="Sterge alarma" />
+      <Button layoutX="252.0" layoutY="377.0" mnemonicParsing="false" onAction="#GoToAdaugaAlarma" text="Adauga alarma" />
+      <Button layoutX="496.0" layoutY="377.0" mnemonicParsing="false" onAction="#StergeAlarma" text="Sterge alarma" />
    </children>
 </AnchorPane>

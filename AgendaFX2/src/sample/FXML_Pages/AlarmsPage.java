@@ -48,4 +48,8 @@ public class AlarmsPage implements Initializable {
     public void GoBackToMain() throws Exception {
         new FXMLSceneChanger().SwitchScene("FXML_Pages/Main", rootPane.getScene());
     }
+
+    public void GoToAdaugaAlarma() throws Exception {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/AdaugaAlarmaPage", rootPane.getScene());
+    }
 }

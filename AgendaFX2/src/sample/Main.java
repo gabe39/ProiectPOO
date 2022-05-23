@@ -16,6 +16,8 @@ public class Main extends Application {
     public static ArrayList<Notita> carnetNotite = new ArrayList<Notita>();
     public static ArrayList<Eveniment> evenimente = new ArrayList<Eveniment>();
     public static ArrayList<Alarma> alarme = new ArrayList<Alarma>();
+    public static ArrayList<Sarcina> listaSarcini = new ArrayList<Sarcina>();
+
 
     @Override
     public void start(Stage stage) throws Exception
@@ -41,15 +43,6 @@ public class Main extends Application {
         agenda.add(c);
         agenda.sort(Contact.ComparatorNumePrenume);
     }
-
-    public static void AfiseazaAgenda()
-    {
-        for (Contact c : agenda)
-        {
-            c.Afisare();
-        }
-    }
-
 
     public static void StergeContact (Contact c)
     {
@@ -96,6 +89,17 @@ public class Main extends Application {
     {
         alarme.remove(a);
         alarme.sort(Alarma.ComparatorOraAlarma);
+    }
+
+    public static void AdaugaSarcina(Sarcina s)
+    {
+        listaSarcini.add(s);
+        listaSarcini.sort(Sarcina.ComparatorTerminatSarcina);
+    }
+    public static void StergeSarcina (Sarcina s)
+    {
+        listaSarcini.remove(s);
+        listaSarcini.sort(Sarcina.ComparatorTerminatSarcina);
     }
 
 }

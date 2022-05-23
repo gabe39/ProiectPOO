@@ -44,6 +44,11 @@ public class mainController
     {
         new FXMLSceneChanger().SwitchScene("FXML_Pages/EvenimentsPage",rootPane.getScene());
     }
+
+    public void GoToListaSarcini() throws Exception
+    {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/ListaSarciniPage",rootPane.getScene());
+    }
     //↑
 
     //Metode care schimba/afiseaza o imagine in functie de pozitia cursorului pe butoane
@@ -53,12 +58,12 @@ public class mainController
         gifView.setImage(null);
     }
 
-    public void ContagtGif()
+    public void ContactGif()
     {
         Image imGif = new Image("AdaugaContact.gif");
         gifView.setImage(imGif);
     }
-    public void ListContagtGif()
+    public void ListContactGif()
     {
         Image imGif = new Image("ListaContacte.gif");
         gifView.setImage(imGif);
@@ -83,6 +88,11 @@ public class mainController
     public void EvenimenteGif()
     {
         Image imGif = new Image("Evenimente.gif");
+        gifView.setImage(imGif);
+    }
+    public void ListaSarciniGif()
+    {
+        Image imGif = new Image("ListaSarcini.gif");
         gifView.setImage(imGif);
     }
     //↑
