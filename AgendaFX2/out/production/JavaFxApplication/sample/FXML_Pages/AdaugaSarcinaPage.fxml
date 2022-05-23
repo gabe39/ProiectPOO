@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.AdaugaSarcinaPage">
+   <children>
+      <Button layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#GoToBack" text="Inapoi" />
+      <Button layoutX="251.0" layoutY="364.0" mnemonicParsing="false" text="Adauga Sarcina" />
+      <VBox alignment="CENTER" layoutX="169.0" layoutY="172.0" prefHeight="60.0" prefWidth="264.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfSarcina" promptText="Sarcina" />
+            <DatePicker fx:id="dpTermenLimita" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
