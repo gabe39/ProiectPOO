@@ -2,7 +2,7 @@ package sample;
 
 public class Buget
 {
-    private float venituri,cheltuieli;
+    private float venituri,cheltuieli, current;
 
     public Buget(float V,float C)
     {

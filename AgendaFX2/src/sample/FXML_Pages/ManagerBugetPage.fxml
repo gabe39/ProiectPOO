@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.ManagerBugetPage">
+<AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.ManagerBugetPage">
    <children>
-      <ListView layoutX="14.0" layoutY="52.0" prefHeight="335.0" prefWidth="573.0" />
-      <TextField layoutX="438.0" layoutY="14.0" />
+      <Button layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#GoToBack" text="Inapoi" />
+      <HBox layoutX="14.0" layoutY="14.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Label text="Buget">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfBuget" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="73.0" text="0" />
+               </children>
+            </HBox>
+            <TextField fx:id="tfNumeCV" prefHeight="25.0" prefWidth="152.0" promptText="Nume cheltuieli/venit" />
+            <TextField fx:id="tfValoare" prefHeight="25.0" prefWidth="107.0" promptText="Valoare" />
+            <ComboBox fx:id="cb" prefHeight="25.0" prefWidth="104.0" promptText="Tip" />
+            <Button mnemonicParsing="false" onAction="#GoToBack" text="Adauga" />
+         </children>
+      </HBox>
+      <TableView fx:id="tableBuget" layoutX="14.0" layoutY="45.0" prefHeight="312.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="tcNumeCV" prefWidth="324.0" text="Nume cheltuieli/venit" />
+          <TableColumn fx:id="tcTip"  minWidth="0.0" prefWidth="132.0" text="Tip" />
+            <TableColumn fx:id="tcSuma" minWidth="0.0" prefWidth="111.0" text="Suma" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
