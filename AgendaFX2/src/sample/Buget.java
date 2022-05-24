@@ -2,35 +2,35 @@ package sample;
 
 public class Buget
 {
-    private double venituri,cheltuieli;
+    private float venituri,cheltuieli;
 
-    public Buget(double V,double C)
+    public Buget(float V,float C)
     {
         this.venituri=V;
         this.cheltuieli=C;
     }
 
-    public double getVenituri()
+    public float getVenituri()
     {
         return this.venituri;
     }
 
-    public double getCheltuieli()
+    public float getCheltuieli()
     {
         return this.cheltuieli;
     }
 
-    public void setVenituri(double V)
+    public float setVenituri(float V)
     {
-        this.venituri=V;
+       return this.venituri=V;
     }
 
-    public void setCheltuieli(double C)
+    public void setCheltuieli(float C)
     {
         this.cheltuieli=C;
     }
 
-    public double bugetRamas()
+    public float bugetRamas()
     {
         return (this.venituri-this.cheltuieli);
     }
