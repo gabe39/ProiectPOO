@@ -19,8 +19,8 @@
       <HBox layoutX="116.0" layoutY="364.0" spacing="10.0">
          <children>
             <Button mnemonicParsing="false" onAction="#GoToAddSarcina" text="Adauga Sarcina" />
-            <Button mnemonicParsing="false" onAction="#StergeSarcinileTerminate" text="Sterge Sarcina Terminata" />
-            <Button mnemonicParsing="false" onAction="#SeteazaSarcinaTerminata" text="Termina Sarcina" />
+            <Button fx:id="btStergeSarcina" mnemonicParsing="false" onAction="#StergeSarcinileTerminate" text="Sterge Sarcina Terminata" />
+            <Button fx:id="btTerminaSarcina" mnemonicParsing="false" onAction="#SeteazaSarcinaTerminata" text="Termina Sarcina" />
          </children>
       </HBox>
    </children>
