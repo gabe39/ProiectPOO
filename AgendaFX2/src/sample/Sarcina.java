@@ -19,6 +19,10 @@ public class Sarcina {
     public String getTermenLimita() {
         return this.termenLimita;
     }
+    public String getStringTerminatSarcina() {
+        if(this.terminatSarcina) return "✅";
+        else return "❎";
+    }
 
     public boolean getTerminatSarcina() {
         return this.terminatSarcina;
@@ -27,6 +31,8 @@ public class Sarcina {
     public void setTerminatSarcina(boolean TS) {
         terminatSarcina = TS;
     }
+
+
 
     public static Comparator<Sarcina> ComparatorTerminatSarcina = (s1, s2) -> {
         Boolean TerminatSarcina1 = s1.getTerminatSarcina();

@@ -5,7 +5,10 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import sample.FXMLSceneChanger;
+import sample.Main;
 import sample.Sarcina;
+
+import java.time.format.DateTimeFormatter;
 
 public class AdaugaSarcinaPage {
 
@@ -14,9 +17,10 @@ public class AdaugaSarcinaPage {
     @FXML DatePicker dpTermenLimita;
 
     public void AdaugaSarcina() throws Exception {
-        String tLimita = dpTermenLimita.toString();
-        Sarcina s = new Sarcina(tfSarcina.getText(), tLimita, false);
-        new FXMLSceneChanger().SwitchScene("FXML_Pages/Main", rootPane.getScene());
+        Sarcina s = new Sarcina(tfSarcina.getText(), dpTermenLimita.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")), false);
+        Main.AdaugaSarcina(s);
+        //for(Sarcina sar : Main.listaSarcini) System.out.print(sar.getNumeSarcina());
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/ListaSarciniPage", rootPane.getScene());
     }
 
     public void GoToBack() throws Exception {

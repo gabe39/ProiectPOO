@@ -4,6 +4,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
 <AnchorPane fx:id="rootPane" prefHeight="403.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_Pages.ListaSarciniPage">
    <children>
@@ -15,7 +16,12 @@
         </columns>
       </TableView>
       <Button layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#GoBackToMain" text="Inapoi" />
-      <Button layoutX="251.0" layoutY="364.0" mnemonicParsing="false" onAction="#GoToAddSarcina" text="Adauga Sarcina" />
-      <Button layoutX="494.0" layoutY="364.0" mnemonicParsing="false" onAction="#StergeSarcinileTerminate" text="Sterge Sarcina" />
+      <HBox layoutX="116.0" layoutY="364.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#GoToAddSarcina" text="Adauga Sarcina" />
+            <Button mnemonicParsing="false" onAction="#StergeSarcinileTerminate" text="Sterge Sarcina Terminata" />
+            <Button mnemonicParsing="false" onAction="#SeteazaSarcinaTerminata" text="Termina Sarcina" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

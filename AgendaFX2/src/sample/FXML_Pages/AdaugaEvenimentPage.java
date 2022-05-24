@@ -22,7 +22,6 @@ public class AdaugaEvenimentPage {
     public void AdaugaEveniment() throws  Exception
     {
         //LocalDate lc = ;
-        String dateFormat;
         Eveniment ev = new Eveniment(tfNumeEveniment.getText(), dpDataEveniment.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),tfOraEveniment.getText()+":"+tfMinutEveniment.getText());
         Main.AdaugaEveniment(ev);
         new FXMLSceneChanger().SwitchScene("FXML_Pages/EvenimentsPage", rootPane.getScene());
