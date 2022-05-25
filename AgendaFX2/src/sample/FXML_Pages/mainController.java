@@ -49,6 +49,11 @@ public class mainController
     {
         new FXMLSceneChanger().SwitchScene("FXML_Pages/ListaSarciniPage",rootPane.getScene());
     }
+
+    public void GoToManagerBuget() throws Exception
+    {
+        new FXMLSceneChanger().SwitchScene("FXML_Pages/ManagerBugetPage",rootPane.getScene());
+    }
     //↑
 
     //Metode care schimba/afiseaza o imagine in functie de pozitia cursorului pe butoane
@@ -93,6 +98,12 @@ public class mainController
     public void ListaSarciniGif()
     {
         Image imGif = new Image("ListaSarcini.gif");
+        gifView.setImage(imGif);
+    }
+
+    public void ManagerBugetGif()
+    {
+        Image imGif = new Image("Buget.gif");
         gifView.setImage(imGif);
     }
     //↑

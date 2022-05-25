@@ -2,36 +2,29 @@ package sample;
 
 public class Buget
 {
-    private float venituri,cheltuieli, current;
+    private String numeTipBuget,tipBuget;
+    public float suma;
 
-    public Buget(float V,float C)
-    {
-        this.venituri=V;
-        this.cheltuieli=C;
+    public Buget(String numeTipBuget, String tipBuget, float suma) {
+        this.numeTipBuget = numeTipBuget;
+        this.tipBuget = tipBuget;
+        this.suma = suma;
     }
 
-    public float getVenituri()
-    {
-        return this.venituri;
+    public String getNumeTipBuget() {
+        return numeTipBuget;
     }
 
-    public float getCheltuieli()
-    {
-        return this.cheltuieli;
+    public String getTipBuget() {
+        return tipBuget;
     }
 
-    public float setVenituri(float V)
+    public String getStringSuma()
     {
-       return this.venituri=V;
-    }
+        String strSuma = null;
+        if(tipBuget.equals("Venit")) strSuma = "+" + suma;
+        else if(tipBuget.equals("Cheltuieli")) strSuma = "-" + suma;
 
-    public void setCheltuieli(float C)
-    {
-        this.cheltuieli=C;
-    }
-
-    public float bugetRamas()
-    {
-        return (this.venituri-this.cheltuieli);
+        return strSuma;
     }
 }

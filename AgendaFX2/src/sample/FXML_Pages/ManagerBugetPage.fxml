@@ -28,7 +28,7 @@
             <TextField fx:id="tfNumeCV" prefHeight="25.0" prefWidth="152.0" promptText="Nume cheltuieli/venit" />
             <TextField fx:id="tfValoare" prefHeight="25.0" prefWidth="107.0" promptText="Valoare" />
             <ComboBox fx:id="cb" prefHeight="25.0" prefWidth="104.0" promptText="Tip" />
-            <Button mnemonicParsing="false" onAction="#GoToBack" text="Adauga" />
+            <Button mnemonicParsing="false" onAction="#AdaugaVC" text="Adauga" />
          </children>
       </HBox>
       <TableView fx:id="tableBuget" layoutX="14.0" layoutY="45.0" prefHeight="312.0" prefWidth="574.0">

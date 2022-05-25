@@ -16,6 +16,7 @@
             <Button layoutX="10.0" layoutY="257.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToAlarms" onMouseEntered="#AlarmGif" onMouseExited="#EmptyGif" text="Alarma" textAlignment="CENTER" />
             <Button layoutX="10.0" layoutY="274.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToEvenimente" onMouseEntered="#EvenimenteGif" onMouseExited="#EmptyGif" text="Evenimente" textAlignment="CENTER" />
             <Button layoutX="10.0" layoutY="292.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToListaSarcini" onMouseEntered="#ListaSarciniGif" onMouseExited="#EmptyGif" text="Lista Sarcini" textAlignment="CENTER" />
+            <Button layoutX="10.0" layoutY="309.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#GoToManagerBuget" onMouseEntered="#ManagerBugetGif" onMouseExited="#EmptyGif" text="Manager Buget" textAlignment="CENTER" />
          </children>
       </VBox>
       <ImageView fx:id="gifView" fitHeight="256.0" fitWidth="256.0" layoutX="294.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true" />
